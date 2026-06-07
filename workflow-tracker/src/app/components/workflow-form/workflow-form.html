@@ -1,0 +1,25 @@
+<div class="form-container">
+  <h2>{{ isEdit ? 'Edit Workflow' : 'Create Workflow' }}</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="workflow.name" name="name" required>
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea [(ngModel)]="workflow.description" name="description"></textarea>
+    </div>
+    <div>
+      <label>Status:</label>
+      <select [(ngModel)]="workflow.status" name="status">
+        <option value="ACTIVE">ACTIVE</option>
+        <option value="PAUSED">PAUSED</option>
+        <option value="COMPLETED">COMPLETED</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button type="submit">Save</button>
+      <button type="button" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

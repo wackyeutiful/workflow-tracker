@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Workflow Dashboard</h2>
+  <button class="btn-create" (click)="createNew()">+ Create Workflow</button>
+
+  <div class="workflow-grid" *ngIf="workflows.length > 0; else noWorkflows">
+    <div *ngFor="let w of workflows" class="workflow-card">
+      <h3>{{ w.name }}</h3>
+      <p>{{ w.description }}</p>
+      <p class="status" [class.active]="w.status === 'ACTIVE'"
+                      [class.paused]="w.status === 'PAUSED'"
+                      [class.completed]="w.status === 'COMPLETED'">
+        {{ w.status }}
+      </p>
+      <p class="date">Created: {{ w.createdAt | date:'short' }}</p>
+      <div class="actions">
+        <button (click)="editWorkflow(w.id!)">Edit</button>
+        <button class="delete" (click)="deleteWorkflow(w.id!)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noWorkflows>
+    <p>No workflows yet. Click "Create Workflow" to add one.</p>
+  </ng-template>
+</div>
