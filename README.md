@@ -11,8 +11,8 @@ Three-tier containerized application with Angular 17 frontend, Spring Boot 3.2.5
 Clone the repository and start the stack:
 
 git clone https://github.com/wackyeutiful/workflow-tracker.git
-cd workflow-tracker
-docker compose up --build
+ / cd workflow-tracker
+/ docker compose up --build
 
 First build takes 5–10 minutes. Once complete, open http://localhost to access the Angular frontend.
 
@@ -47,7 +47,7 @@ docker compose --profile monitoring up --build
 
 Additional endpoints:
 Prometheus: http://localhost:9090
-Grafana: http://localhost:3000 (login: admin / admin)
+Grafana: http://localhost:3000 (login: ******* /*******)
 Grafana is pre-provisioned with a "Workflow Tracker" dashboard showing backend status, request rate, and response time.
 
 Architecture:
