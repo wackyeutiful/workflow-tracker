@@ -82,7 +82,7 @@ Copy .env.example to .env and customize:
 cp .env.example .env
 
 Variables:
-GRAFANA_ADMIN_PASSWORD: ****************
+GRAFANA_ADMIN_PASSWORD: 221JFT4190 (login:admin)
 Health Checks:
 All services expose Docker health checks for ordered startup:
 MongoDB: mongosh ping command
